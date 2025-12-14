@@ -81,4 +81,4 @@ This repository can serve as a **reference for debugging SSH authentication issu
 
  ## then added global user name and email to use all the commit for this computer 
  - git config --global user.name waqarwld 
- - git config --global user.email waqarwld@gmail.com
+ - git config --global user.email waqar***@gmail.com
