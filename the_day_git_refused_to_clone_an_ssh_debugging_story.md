@@ -82,3 +82,8 @@ This repository can serve as a **reference for debugging SSH authentication issu
  ## then added global user name and email to use all the commit for this computer 
  - git config --global user.name waqarwld 
  - git config --global user.email waqar***@gmail.com
+
+ ## to setup Secret key (AWS_ACCESS_KEY_ID) and (AWS_SECRET_ACCESS_KEY) from github cli commands 
+ - gh secret set AWS_ACCESS_KEY_ID --body "your_access_key_id" --repo waqarwld/iac-vprofile
+ - gh secret set AWS_SECRET_ACCESS_KEY --body "your_secret_access_key" --repo waqarwld/iac-vprofile
+
