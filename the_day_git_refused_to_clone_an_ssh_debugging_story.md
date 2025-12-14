@@ -87,3 +87,36 @@ This repository can serve as a **reference for debugging SSH authentication issu
  - gh secret set AWS_ACCESS_KEY_ID --body "your_access_key_id" --repo waqarwld/iac-vprofile
  - gh secret set AWS_SECRET_ACCESS_KEY --body "your_secret_access_key" --repo waqarwld/iac-vprofile
 
+ ## Variable setup for github from github cli example
+ - gh variable set AWS_REGION --body "us-east-1" --repo waqarwld/iac-vprofile
+ 
+ ## Verify the secrets / variables
+ - # List secrets (names only)
+gh secret list --repo waqarwld/iac-vprofile
+
+# List variables
+gh variable list --repo waqarwld/iac-vprofile
+
+## Safe way to add secret from cli 
+- gh secret set AWS_ACCESS_KEY_ID --repo waqarwld/iac-vprofile 
+## Github CLI will prompt:
+- then enter key 
+
+## or Use Bash as export 
+- export AWS_ACCESSS_KEY_ID="YOUR_KEY_HERE"
+- gh secret set AWS_ACCESS_KEY_ID --repo waqarwld/iac-vprofile --body "$AWS_ACCESS_KEY_ID"
+- unset AWS_ACCESS_KEY_ID
+## TO REMOVE FROM THE VARIBALE
+
+## BEST PRACTICE ALWAYS TYPE MANUALLY as Secure environment variable OR USE VAULT SYSTEM 
+- # Export temporarily
+- read -sp "Enter AWS Access Key ID: " AWS_ACCESS_KEY_ID
+- read -sp "Enter AWS Secret Access Key: " AWS_SECRET_ACCESS_KEY
+
+# Add secrets safely to GitHub
+- gh secret set AWS_ACCESS_KEY_ID --repo waqarwld/iac-vprofile --body "$AWS_ACCESS_KEY_ID"
+- gh secret set AWS_SECRET_ACCESS_KEY --repo waqarwld/iac-vprofile --body "$AWS_SECRET_ACCESS_KEY"
+
+ # Clear variables from shell memory
+- unset AWS_ACCESS_KEY_ID
+- unset AWS_SECRET_ACCESS_KEY
