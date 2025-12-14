@@ -80,5 +80,5 @@ git config core.sshCommand "ssh -i ~/.ssh/actions -F /dev/null"
 This repository can serve as a **reference for debugging SSH authentication issues** in Git and as a **storytelling example** for interviews or educational purposes.
 
  ## then added global user name and email to use all the commit for this computer 
- --git config --global user.name waqarwld 
- --git config --global user.email waqarwld@gmail.com
+ - git config --global user.name waqarwld 
+ - git config --global user.email waqarwld@gmail.com
